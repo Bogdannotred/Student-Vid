@@ -3,8 +3,10 @@ import Header from "./components/Header.jsx";
 
 function App() {
   return (
-    <div className="bg-gray-400">
-      <Header/>
+    <div className="bg-gray-100 min-h-screen">
+      <div>
+        <Header/>
+      </div>
     </div>
   );
 }
