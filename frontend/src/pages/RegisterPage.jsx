@@ -2,13 +2,14 @@ import React from "react";
 import LogoWithText from "../assets/LogoWithText.png"
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-export default function LoginPage() {
+
+export default function RegisterPage() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
     <div className="bg-gradient-to-r from-blue-400 to-purple-500 font-poppins min-h-screen flex flex-col items-center bg-gray-100">
@@ -24,7 +25,7 @@ export default function LoginPage() {
       </header>
       <div className="bg-blue-100 p-8 rounded-xl shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
-          Welcome Back
+          Create Account
         </h2>
         <form>
           <div className="mb-4">
@@ -53,11 +54,24 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-medium mb-2">
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+              placeholder="Confirm your password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
           <button className="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-500 transition duration-200">
-            Sign In
+            Register
           </button>
-          <Link to="/register" className="text-xl text-gray-600 mt-5 inline-block cursor-pointer hover:text-gray-800 transition duration-200 w-full text-center">
-            You don't have an account? Register
+          <Link to="/login" className="text-xl text-gray-600 mt-5 inline-block cursor-pointer hover:text-gray-800 transition duration-200 w-full text-center">
+            You have an account? Login
           </Link>
         </form>
       </div>
