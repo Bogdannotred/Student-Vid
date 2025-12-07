@@ -3,13 +3,17 @@ import LogoWithText from "../assets/LogoWithText.png"
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { createClient } from "@supabase/supabase-js";
 
 export default function RegisterPage() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+  const supabaseKey = process.env.REACT_APP_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
+  const supabase = createClient(supabaseUrl, supabaseKey);
 
   return (
     <div className="bg-gradient-to-r from-blue-400 to-purple-500 font-poppins min-h-screen flex flex-col items-center bg-gray-100">
