@@ -71,8 +71,20 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-500 transition duration-200">
+          <button className="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-500 transition duration-200 px-4 mb-4">
             Sign In
+          </button>
+          <button 
+            type="button" 
+            onClick={handleGoogleLogin}
+            className="w-full flex items-center justify-center bg-white border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-50 transition duration-200"
+        >
+            <img 
+              src="https://www.svgrepo.com/show/475656/google-color.svg" 
+              className="h-6 w-6 mr-2" 
+              alt="Google" 
+            />
+            Sign in with Google
           </button>
           <Link to="/register" className="text-xl text-gray-600 mt-5 inline-block cursor-pointer hover:text-gray-800 transition duration-200 w-full text-center">
             You don't have an account? Register
