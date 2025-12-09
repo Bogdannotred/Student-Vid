@@ -15,7 +15,7 @@ import QRCode from "react-qr-code";
 
         <div className="relative z-10 flex flex-col justify-between h-full p-5">
           
-          <div className="flex justify-between items-start">
+           <div className="flex justify-between items-start">
             <div>
               <h2 className="text-sm font-bold uppercase tracking-widest opacity-90">{user?.user_metadata?.university || 'Universitatea X'}</h2>
               <p className="text-xs opacity-80">Legitimație Digitală</p>

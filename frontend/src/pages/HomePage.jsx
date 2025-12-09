@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import StudentCard from "../components/StudentCard";
-import DocumentUpload from "../components/DocumentUpload";
-import DocumentList from "../components/DocumentList";
 import { supabase } from "../supabaseClient";
 
 export default function HomePage() {
@@ -48,8 +46,6 @@ export default function HomePage() {
       <Header />
       <main className="text-black p-6">
         <StudentCard user={user} />
-        <DocumentUpload onUpload={fetchDocuments} />
-        <DocumentList documents={documents} loading={loading} onDelete={fetchDocuments} />
       </main>
     </div>
   );
